@@ -679,6 +679,7 @@ void GoToFase2() {
     posX = 315; // POSIÇÃO X DA PERSONAGEM
     posY = 595; // POSIÇÃO Y DA PERSONAGEM
     showLifes();
+    CreateDinos();
     Regina();
     showPonctuation();
   }
