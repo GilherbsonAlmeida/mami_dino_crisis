@@ -122,7 +122,7 @@ void criaMundo() {
   }
 }
 
-// MAPA1
+//EXIBIR CONTADOR DE VIDAS
 void showLifes() {
   LifeImage = loadImage("ICON-REGINA.png");
   int initialX = 280;
@@ -297,6 +297,7 @@ void Atira() {
       circle (posX - i, posY + 30, 10);
     }
   } 
+  
   if ((keyPressed) && (keyCode == SHIFT) && (pose == 3)) {
     for (int i = 0; i < 400; i ++) {
       int posCircleX = 0;
@@ -326,8 +327,8 @@ void Atira() {
       posCircleY = (posY + 30) + i;
       circle (posCircleX, posCircleY, 10);
       
-      //println("Pose 4 - posCircleX: " + posCircleX);
-      //println("Pose 4 - posCircleY: " + posCircleY);
+      println("Pose 4 - posCircleX: " + posCircleX);
+      println("Pose 4 - posCircleY: " + posCircleY);
       
       if ((posCircleX >= 889 && posCircleX <= 920 && posCircleY >= 335) || (posCircleX >= 870 && posCircleX <= 885 && posCircleY >= 360)) {
         existsDino4 = false;
@@ -675,6 +676,11 @@ void GoToFase2() {
     image(Mapa2, 0, 0);
     isFase1 = false;
     isFase2 = true;
+    
+    existsDino1 = true;
+    existsDino2 = true;
+    existsDino3 = true;
+    existsDino4 = true;
     
     posX = 315; // POSIÇÃO X DA PERSONAGEM
     posY = 595; // POSIÇÃO Y DA PERSONAGEM
